@@ -18,17 +18,43 @@
 </head>
 
 <body>
-	<header>
-		<h1>Ohmyfood</h1>
+	<div class="main-container">
+		<header>
+			<img src="./Images et textes Ohmyfood/images/logo/Ohmyfood@2x.svg">
+			<div class="formulaire_de_recherche">
+				<div>
+					<i class="fa-solid fa-location-dot point"></i>
+				</div>
+				<div id="formulaire">
+					<form method="post" action="traitement.php">
+						<input type="text" name="ville, pays" id="ville,quartier" placeholder="Paris, Belleville"
+							size="20" maxlength="30">
+					</form>
+				</div>
+			</div>
+		</header>
 
-		<i class="fa-solid fa-vector-square"></i>
-		<i class=""></i>
-	</header>
+		<aside>
+			<h1>Réservez le menu qui vous convient</h1>
+			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+			<a href="restaurants"><button class="resto" type="button">Explorer nos restaurants></button></a>
+		</aside>
 
 
-	<footer>
+		<footer>
+			<img src="./Images et textes Ohmyfood/images/logo/Ohmyfood@2x.svg">
+			<nav>
+				<ul>
+					<li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+					<li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+					<li><a href="#">Mentions légales</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
 
-	</footer>
+			</nav>
+
+		</footer>
+	</div>
 </body>
 
 </html>
