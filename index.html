@@ -18,29 +18,41 @@
 </head>
 
 <body>
-    <div class="main-container">
+    <main>
         <header>
-            <img src="./assets/logo/ohmyfood@2x.svg" alt="Logo">
+            <a href="index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
+            <img class="logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo">
+
+
             <div class="formulaire_de_recherche">
-                <div>
+                <!--<div>
                     <i class="fa-solid fa-location-dot point"></i>
                 </div>
                 <div id="formulaire">
                     <form method="post" action="traitement.php">
-                        <input type="text" name="ville, pays" id="ville,quartier" placeholder="Paris, Belleville"
-                            size="20" maxlength="30">
+                        <input type="text" name="ville, pays" id="ville" placeholder="Paris, Belleville" size="20"
+                            maxlength="30">
                     </form>
                 </div>
+            </div>-->
+
+                <form method="post" action="">
+                    <p>
+                        <label for="ville"><i class="fa-solid fa-location-dot point"></i></label>
+                        <input type="text" name="ville" id="ville" placeholder="Paris, Belleville" size="20"
+                            maxlength="20">
+                    </p>
+                </form>
             </div>
         </header>
 
-        <aside>
+        <section class="intro">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="resto" type="button">Explorer nos restaurants</button>
-        </aside>
+            <button class="button_resto" type="button">Explorer nos restaurants</button>
+        </section>
 
-        <section>
+        <nav>
             <h1>Fonctionnement</h1>
             <div>
                 <p>1</p>
@@ -57,7 +69,7 @@
                 <i class="fa-solid fa-store"></i>
                 <p>Dégustez au restaurant</p>
             </div>
-        </section>
+        </nav>
 
         <section>
             <h1>restaurants</h1>
@@ -73,6 +85,7 @@
                             </div>
                             <div class="card-heart">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -88,6 +101,7 @@
                             </div>
                             <div class="card-heart">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -103,6 +117,7 @@
                             </div>
                             <div class="card-heart">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -119,6 +134,7 @@
                             </div>
                             <div class="card-heart">
                                 <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </article>
@@ -139,7 +155,7 @@
             </nav>
 
         </footer>
-    </div>
+    </main>
 </body>
 
 </html>

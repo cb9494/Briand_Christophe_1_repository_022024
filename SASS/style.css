@@ -1,8 +1,91 @@
-h1 {
-  color: red;
-  font-family: "Shrikhand";
+html {
+  font-size: 16px;
 }
-h1 img {
-  height: 15px;
+
+body {
+  margin: 0;
 }
-/*# sourceMappingURL=style.css.map */
+
+header {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header .logo {
+  display: flex;
+  width: 100%;
+  height: 2.25rem;
+  justify-content: center;
+  align-items: center;
+}
+header .arrow {
+  position: absolute;
+  left: 16px;
+  top: 9px;
+  size-adjust: 2em;
+  text-decoration: none;
+  color: black;
+}
+header .formulaire_de_recherche {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(234, 234, 234);
+}
+header .formulaire_de_recherche form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+header .formulaire_de_recherche form .p {
+  display: flex;
+  flex-direction: row;
+}
+header .formulaire_de_recherche form #formulaire {
+  border-style: none;
+  color: rgb(0, 0, 0);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(225, 225, 225);
+}
+.intro h1 {
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 70px;
+}
+.intro p {
+  font-size: 1.125em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 30px;
+}
+.intro .button_resto {
+  height: 50px;
+  width: 218px;
+  display: inline-block;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: rgb(138, 43, 226);
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.intro .button_resto:hover {
+  background-color: rgba(138, 43, 226, 0.9);
+}/*# sourceMappingURL=style.css.map */
