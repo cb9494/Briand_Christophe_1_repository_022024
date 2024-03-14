@@ -1,0 +1,11 @@
+@mixin btn ($largeur) {
+	color: white;
+	font-size: 1em;
+	height: 50px;
+	width: $largeur;
+	border-radius: 25px;
+	border: none;
+	box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.5);
+	background: linear-gradient($color_secondaire, $color_primaire );
+	cursor: pointer;
+}

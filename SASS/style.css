@@ -1,3 +1,12 @@
+* {
+  font-family: "roboto", "Shrikhand&display", sans-serif;
+}
+
+img {
+  width: 25px;
+  height: auto;
+}
+
 html {
   font-size: 16px;
 }
@@ -7,53 +16,80 @@ body {
 }
 
 header {
-  height: 90px;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-header .logo {
+header .titre {
+  width: 100%;
+  height: 63px;
+}
+header .titre .logo {
   display: flex;
   width: 100%;
   height: 2.25rem;
+  margin: 15px 0;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-header .arrow {
+header .titre .arrow {
   position: absolute;
   left: 16px;
   top: 9px;
-  size-adjust: 2em;
+  margin: 1rem;
   text-decoration: none;
   color: black;
 }
 header .formulaire_de_recherche {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
-  background-color: rgb(234, 234, 234);
-}
-header .formulaire_de_recherche form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  /*form {
+      //height: 50px;
+      //width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+
+      .p {
+          display: flex;
+          flex-direction: row;
+      }
+
+      //.point {
+      //    color: rgba(0, 0, 0, 0.8);
+      // }
+
+      #formulaire {
+          border-style: none;
+          color: rgba(0, 0, 0);
+      }
+  }*/
 }
-header .formulaire_de_recherche form .p {
-  display: flex;
-  flex-direction: row;
+header .formulaire_de_recherche .point {
+  color: rgb(53, 53, 53);
+  margin: 0 20px;
 }
-header .formulaire_de_recherche form #formulaire {
-  border-style: none;
-  color: rgb(0, 0, 0);
+header .formulaire_de_recherche p {
+  font-size: 1rem;
+  color: rgb(53, 53, 53);
 }
 
 .intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(225, 225, 225);
+  background-color: rgb(246, 246, 246);
+  padding: 2rem 0;
 }
 .intro h1 {
   font-size: 1.5em;
@@ -69,23 +105,71 @@ header .formulaire_de_recherche form #formulaire {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 30px;
+  margin: 30px 30px;
 }
 .intro .button_resto {
+  display: flex;
+  justify-content: center;
+}
+.intro .button {
+  color: white;
+  font-size: 1em;
   height: 50px;
   width: 218px;
-  display: inline-block;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: rgb(138, 43, 226);
-  color: white;
-  text-align: center;
-  font-size: 1em;
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   cursor: pointer;
 }
-.intro .button_resto:hover {
-  background-color: rgba(138, 43, 226, 0.9);
+.intro .button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+  margin: 20px 20px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  width: 335px;
+}
+nav .choix {
+  width: 335px;
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  border-style: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(246, 246, 246);
+}
+nav .choix .nbr {
+  position: absolute;
+  left: -37px;
+  width: 24px;
+  height: 24px;
+  border-style: none;
+  border-radius: 24px;
+  background-color: rgb(147, 86, 220);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+nav .choix i {
+  margin-left: 35px;
+  color: rgb(126, 126, 126);
+}
+nav .choix p {
+  font-weight: bold;
+  margin-left: 25px;
 }/*# sourceMappingURL=style.css.map */

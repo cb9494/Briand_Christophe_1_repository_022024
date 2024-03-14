@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./SASS/style.css">
@@ -20,15 +25,20 @@
 <body>
     <main>
         <header>
-            <a href="index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
-            <img class="logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo">
-
+            <div class="titre">
+                <a href="index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
+                <img class="logo" src="./assets/logo/ohmyfood@2x.svg" alt="Logo">
+            </div>
 
             <div class="formulaire_de_recherche">
-                <!--<div>
+                <div>
                     <i class="fa-solid fa-location-dot point"></i>
                 </div>
-                <div id="formulaire">
+                <div>
+                    <p>Paris, Belleville</p>
+                </div>
+
+                <!--<div id="formulaire">
                     <form method="post" action="traitement.php">
                         <input type="text" name="ville, pays" id="ville" placeholder="Paris, Belleville" size="20"
                             maxlength="30">
@@ -36,36 +46,38 @@
                 </div>
             </div>-->
 
-                <form method="post" action="">
+                <!--<form method="post" action="">
                     <p>
                         <label for="ville"><i class="fa-solid fa-location-dot point"></i></label>
                         <input type="text" name="ville" id="ville" placeholder="Paris, Belleville" size="20"
                             maxlength="20">
                     </p>
-                </form>
+                </form>-->
             </div>
         </header>
 
         <section class="intro">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="button_resto" type="button">Explorer nos restaurants</button>
+            <div class="button_resto">
+                <button class="button" type="button">Explorer nos restaurants</button>
+            </div>
         </section>
 
         <nav>
             <h1>Fonctionnement</h1>
-            <div>
-                <p>1</p>
-                <i class="fa-solid fa-mobile-screen-button"></i>
+            <div class="choix">
+                <p class="nbr">1</p>
+                <i class="fa-solid fa-mobile-screen-button "></i>
                 <p>Choisissez un restaurant</p>
             </div>
-            <div>
-                <p>2</p>
+            <div class="choix">
+                <p class="nbr">2</p>
                 <i class="fa-solid fa-list-ul"></i>
                 <p>Composez votre menu</p>
             </div>
-            <div>
-                <p>3</p>
+            <div class="choix">
+                <p class="nbr">3</p>
                 <i class="fa-solid fa-store"></i>
                 <p>Dégustez au restaurant</p>
             </div>
