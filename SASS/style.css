@@ -2,17 +2,18 @@
   font-family: "roboto", "Shrikhand&display", sans-serif;
 }
 
-img {
-  width: 25px;
-  height: auto;
-}
-
 html {
   font-size: 16px;
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -24,21 +25,19 @@ header {
 }
 header .titre {
   width: 100%;
-  height: 63px;
 }
 header .titre .logo {
   display: flex;
   width: 100%;
   height: 2.25rem;
-  margin: 15px 0;
+  padding: 20px 0;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 header .titre .arrow {
   position: absolute;
-  left: 16px;
-  top: 9px;
+  top: 14px;
   margin: 1rem;
   text-decoration: none;
   color: black;
@@ -46,42 +45,18 @@ header .titre .arrow {
 header .formulaire_de_recherche {
   display: flex;
   width: 100%;
+  margin-top: 6px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgb(234, 234, 234);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-  /*form {
-      //height: 50px;
-      //width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-
-
-      .p {
-          display: flex;
-          flex-direction: row;
-      }
-
-      //.point {
-      //    color: rgba(0, 0, 0, 0.8);
-      // }
-
-      #formulaire {
-          border-style: none;
-          color: rgba(0, 0, 0);
-      }
-  }*/
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 header .formulaire_de_recherche .point {
-  color: rgb(53, 53, 53);
-  margin: 0 20px;
+  margin-right: 20px;
 }
 header .formulaire_de_recherche p {
   font-size: 1rem;
-  color: rgb(53, 53, 53);
 }
 
 .intro {
@@ -105,7 +80,7 @@ header .formulaire_de_recherche p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 30px 30px;
+  margin: 25px 30px;
 }
 .intro .button_resto {
   display: flex;
@@ -128,21 +103,22 @@ header .formulaire_de_recherche p {
 }
 
 nav {
-  margin: 20px 20px;
-  width: auto;
+  margin: 40px 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 nav h1 {
   font-size: 1.5rem;
-  margin: 0;
+  margin-bottom: 25px;
   width: 335px;
 }
 nav .choix {
   width: 335px;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-left: 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -169,7 +145,143 @@ nav .choix i {
   margin-left: 35px;
   color: rgb(126, 126, 126);
 }
+nav .choix i.store {
+  color: rgb(147, 86, 220);
+}
 nav .choix p {
   font-weight: bold;
-  margin-left: 25px;
-}/*# sourceMappingURL=style.css.map */
+  margin: 30px 0 30px 25px;
+}
+
+.resto {
+  padding: 40px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+}
+.resto h1 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  width: 90%;
+}
+.resto a {
+  width: 100%;
+}
+.resto .card {
+  width: 90%;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  border-style: none;
+  border-radius: 15px;
+  background-color: white;
+}
+.resto .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+.resto .card .card-txt {
+  margin: 20px;
+}
+.resto .card h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  height: auto;
+  width: 267px;
+  color: black;
+  display: flex;
+  align-self: start;
+  margin: 0;
+}
+.resto .card p {
+  font-size: 1.06rem;
+  font-weight: 300;
+  height: auto;
+  width: 267px;
+  color: rgb(53, 53, 53);
+  display: flex;
+  align-self: start;
+  margin: 0;
+  padding-top: 5px;
+}
+.resto .card .card-heart {
+  position: absolute;
+  left: 90%;
+  top: 80%;
+}
+.resto .card .nouveau p {
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px rgb(153, 226, 208) solid;
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  border-radius: 2px;
+  padding: 5px 10px;
+  width: auto;
+  /*position: absolute;
+  right: 4%;
+  top: 4%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px $color_tertiaire solid;
+  background-color: $color_tertiaire;
+  color: $color_quaternaire;
+  border-radius: 2px;
+  padding: 5px 10px;
+  width: auto;*/
+}
+
+footer {
+  padding-bottom: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+footer img {
+  height: 1.25rem;
+  margin: 20px 22px;
+}
+footer ul {
+  list-style-type: none;
+  margin: 0 22px;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li.modcourt {
+  font-weight: 300;
+}
+footer ul li.modlong {
+  font-weight: 500;
+}
+footer ul a {
+  color: white;
+}
+footer ul .couvert {
+  padding-right: 16px;
+}
+footer ul .partenaire {
+  padding-right: 10px;
+}
+
+/*@media screen and (min-width:768px) and (max-width:1440px) {
+    main {
+        width: 768px;
+    }
+}*//*# sourceMappingURL=style.css.map */

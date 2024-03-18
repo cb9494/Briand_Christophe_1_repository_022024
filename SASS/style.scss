@@ -5,18 +5,18 @@
 @import 'variables';
 @import 'mixin';
 
-
-img {
-    width: 25px;
-    height: auto;
-}
-
 html {
     font-size: 16px;
 }
 
 body {
-    margin: 0;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
 }
 
 //
@@ -29,26 +29,28 @@ header {
 
     .titre {
         width: 100%;
-        height: 63px;
+        //height: 63px;
 
         //background-color: rgb(103, 37, 37);
 
 
         .logo {
+            //position: relative;
             display: flex;
             width: 100%;
             height: 2.25rem;
-            margin: 15px 0;
+            //margin: 20px 0;
+            padding: 20px 0;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.5);
+            box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.2);
         }
 
         .arrow {
             //display: none;
             position: absolute;
-            left: 16px;
-            top: 9px;
+            //left: 16px;
+            top: 14px;
             margin: 1rem;
             text-decoration: none;
             color: black;
@@ -58,46 +60,23 @@ header {
     .formulaire_de_recherche {
         display: flex;
         width: 100%;
+        margin-top: 6px;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         background-color: $fond_gris;
-        box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.5);
+        box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.2);
 
-        //box-shadow: 0px -5px 5px rgb(0, 0, 0, 0.5);
         .point {
-            color: $fond;
-            margin: 0 20px;
+            //color: $fond;
+            margin-right: 20px;
         }
 
         p {
             font-size: 1rem;
-            color: $fond;
+            //color: $fond;
         }
 
-        /*form {
-            //height: 50px;
-            //width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-
-
-            .p {
-                display: flex;
-                flex-direction: row;
-            }
-
-            //.point {
-            //    color: rgba(0, 0, 0, 0.8);
-            // }
-
-            #formulaire {
-                border-style: none;
-                color: rgba(0, 0, 0);
-            }
-        }*/
     }
 }
 
@@ -125,7 +104,8 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 30px 30px;
+        margin: 25px 30px;
+        //color: $fond-footer;
     }
 
     .button_resto {
@@ -146,22 +126,23 @@ header {
 //
 
 nav {
-    margin: 20px 20px;
-    width: auto;
+    margin: 40px 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
     h1 {
         font-size: 1.5rem;
-        margin: 0;
+        margin-bottom: 25px;
         width: 335px;
     }
 
     .choix {
         width: 335px;
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        margin-left: 10px;
         display: flex;
         align-items: center;
         flex-direction: row;
@@ -188,13 +169,171 @@ nav {
         i {
             margin-left: 35px;
             color: $color_i;
+
+            &.store {
+                color: $color_primaire;
+            }
         }
 
         p {
             font-weight: bold;
-            margin-left: 25px;
+            //margin-left: 25px;
+            margin: 30px 0 30px 25px;
         }
 
 
     }
 }
+
+//
+
+.resto {
+    padding: 40px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_fond;
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        width: 90%;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        border-style: none;
+        border-radius: 15px;
+        background-color: white;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 250px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-txt {
+            margin: 20px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            height: auto;
+            width: 267px;
+            color: black;
+            display: flex;
+            align-self: start;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.06rem;
+            font-weight: 300;
+            height: auto;
+            width: 267px;
+            color: $color_footer;
+            display: flex;
+            align-self: start;
+            margin: 0;
+            padding-top: 5px;
+        }
+
+        .card-heart {
+            position: absolute;
+            left: 90%;
+            top: 80%;
+        }
+
+        .nouveau p {
+            @include encart;
+            /*position: absolute;
+            right: 4%;
+            top: 4%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 3px $color_tertiaire solid;
+            background-color: $color_tertiaire;
+            color: $color_quaternaire;
+            border-radius: 2px;
+            padding: 5px 10px;
+            width: auto;*/
+        }
+
+    }
+
+}
+
+//
+
+footer {
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    //align-items: center;
+    background-color: $color_footer;
+    color: white;
+    //font-weight: 100;
+
+
+    img {
+        height: 1.25rem;
+        margin: 20px 22px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0 22px;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            &.modcourt {
+                font-weight: 300;
+            }
+
+            &.modlong {
+                font-weight: 500;
+            }
+        }
+
+
+        a {
+            color: white;
+            //font-size: 1rem;
+        }
+
+        .couvert {
+            padding-right: 16px;
+        }
+
+        .partenaire {
+            padding-right: 10px;
+        }
+
+
+    }
+
+}
+
+/*@media screen and (min-width:768px) and (max-width:1440px) {
+    main {
+        width: 768px;
+    }
+}*/
