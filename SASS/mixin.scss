@@ -63,3 +63,32 @@
     padding: 5px 10px;
     width: auto;
 }
+
+@mixin coeur () {
+    position: absolute;
+    left: 85%;
+    top: 80%;
+    font-size: 1.6rem;
+
+
+    i {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .coeur-plein {
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 1000ms;
+        //transition: opacity 200ms;
+        background-image: linear-gradient($color_secondaire, $color_primaire);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: scale(1.1);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
