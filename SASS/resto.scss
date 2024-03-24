@@ -1,0 +1,225 @@
+* {
+    font-family: 'roboto', 'Shrikhand&display', sans-serif;
+}
+
+@import 'variables';
+@import 'mixin';
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    max-width: 768px;
+    width: 100%;
+}
+
+//
+header {
+    @include hea ();
+}
+
+section {
+    .photo {
+        position: relative;
+        width: 100%;
+        height: 275px;
+        display: inline-block;
+        object-fit: cover;
+        object-position: center 75%;
+    }
+
+    .carte {
+        position: relative;
+        background-color: $color_fond;
+        //z-index: 1;
+        margin-top: -60px;
+        border-radius: 32px 32px 0 0;
+    }
+}
+
+.carte {
+
+
+    .nom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        h1 {
+            font-family: Shrikhand;
+            font-size: 1.5rem;
+            padding: 10px 0 0px 0px;
+            //padding-left: 17px;
+        }
+
+        .card-heart {
+            display: inline-block;
+            @include coeur (20px, -5px, relative);
+            font-size: 21px;
+        }
+
+    }
+
+    .menu {
+        padding: 0 13px;
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            padding-bottom: 5px;
+            border-bottom: 3px solid $color_tertiaire;
+            width: 30px;
+
+        }
+
+        .plats {
+            position: relative;
+            width: 100%;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 7px;
+
+
+            h3 {
+                font-size: 1.125rem;
+                font-weight: 600;
+                padding: 15px 0 0 15px;
+                margin: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            h4 {
+                font-size: 1 rem;
+                font-weight: 300;
+                margin: 0;
+                padding-left: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            h5 {
+                padding-right: 15px;
+                font-size: 1.125rem;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .prix {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 5px;
+                padding-right: 58px;
+            }
+
+            .vert {
+
+                border: 0;
+                padding: 0;
+
+                .fa-circle-check {
+                    position: absolute;
+                    right: 0%;
+                    top: 0%;
+                    color: white;
+                    width: 22px;
+                    height: 22px;
+                    background-color: $color_tertiaire;
+                    border-radius: 0 15px 15px 0;
+                    width: 55px;
+                    height: 64px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            }
+        }
+    }
+
+    .button_resto {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 25px;
+        @include btn(186px);
+    }
+}
+
+footer {
+    @include footer;
+}
+
+@media screen and (min-width:769px)
+/*and (max-width:1440px)*/
+    {
+    main {
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    /*section {
+        .photo {
+            height: 500px;
+            object-fit: cover;
+            object-position: 90%;
+
+        }
+
+        .carte {
+            width: 80%;
+            display: flex;
+            //justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }*/
+
+    footer {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+
+        &.logo__footer {
+            padding-right: 56px;
+            padding-bottom: 2 px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+
+            li {
+                &.modcourt {
+                    margin-right: 25px;
+                }
+
+                &.modlong {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+
+        img {
+            margin-bottom: 10px;
+        }
+
+    }
+}

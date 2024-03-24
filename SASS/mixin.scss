@@ -64,10 +64,10 @@
     width: auto;
 }
 
-@mixin coeur () {
-    position: absolute;
-    left: 85%;
-    top: 80%;
+@mixin coeur ($left, $top, $position) {
+    position: $position;
+    left: $left;
+    top: $top;
     font-size: 1.6rem;
 
 
@@ -79,7 +79,7 @@
     .coeur-plein {
         opacity: 0;
         transition-property: all;
-        transition-duration: 1000ms;
+        transition-duration: 200ms;
         //transition: opacity 200ms;
         background-image: linear-gradient($color_secondaire, $color_primaire);
         background-clip: text;
@@ -89,6 +89,52 @@
 
         &:hover {
             opacity: 1;
+        }
+    }
+}
+
+@mixin footer {
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    /*display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+    background-color: $color_footer;
+    color: white;
+
+    img {
+        height: 1.25rem;
+        margin: 20px 22px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0 22px;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            &.modcourt {
+                font-weight: 300;
+            }
+
+            &.modlong {
+                font-weight: 500;
+            }
+        }
+
+        a {
+            color: white;
+        }
+
+        .couvert {
+            padding-right: 16px;
+        }
+
+        .partenaire {
+            padding-right: 10px;
         }
     }
 }
