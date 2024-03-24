@@ -115,12 +115,13 @@ section .carte {
   width: 100%;
   background-color: white;
   border-radius: 15px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
 .carte .menu .plats h3 {
   font-size: 1.125rem;
   font-weight: 600;
-  padding: 15px 0 0 15px;
+  padding: 15px 55px 0 15px;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -169,7 +170,7 @@ section .carte {
 .carte .button_resto {
   display: flex;
   justify-content: center;
-  padding: 20px 0 25px;
+  padding: 37px 0 40px;
   display: flex;
   justify-content: center;
 }
@@ -232,22 +233,55 @@ footer ul .partenaire {
     max-width: 1440px;
     width: 100%;
   }
-  /*section {
-      .photo {
-          height: 500px;
-          object-fit: cover;
-          object-position: 90%;
-
-      }
-
-      .carte {
-          width: 80%;
-          display: flex;
-          //justify-content: center;
-          flex-direction: column;
-          align-items: center;
-      }
-  }*/
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section .photo {
+    height: 383px;
+    -o-object-position: center 58%;
+       object-position: center 58%;
+  }
+  section .carte {
+    width: 75%;
+    border-radius: 50px 50px 0 0;
+    margin-top: -48px;
+    /*display: flex;
+    //justify-content: center;
+    flex-direction: column;
+    align-items: center;*/
+  }
+  section .carte .nom h1 {
+    padding-top: 50px;
+  }
+  section .carte .menu .sousmenu {
+    width: 70%;
+    margin: 0 auto;
+  }
+  section .carte .nom .card-heart {
+    position: relative;
+    left: 20px;
+    top: 15px;
+    font-size: 1.6rem;
+  }
+  section .carte .nom .card-heart i {
+    position: absolute;
+    cursor: pointer;
+  }
+  section .carte .nom .card-heart .coeur-plein {
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 200ms;
+    background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+  }
+  section .carte .nom .card-heart .coeur-plein:hover {
+    opacity: 1;
+  }
   footer {
     display: flex;
     justify-content: flex-start;
@@ -264,6 +298,9 @@ footer ul .partenaire {
     flex-direction: row;
     margin: 0;
   }
+  footer ul li {
+    margin: 0 10px;
+  }
   footer ul li.modcourt {
     margin-right: 25px;
   }
@@ -271,6 +308,6 @@ footer ul .partenaire {
     margin-right: 40px;
   }
   footer img {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=resto.css.map */
