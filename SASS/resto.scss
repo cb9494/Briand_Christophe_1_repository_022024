@@ -134,7 +134,7 @@ section {
 
                 .fa-circle-check {
                     position: absolute;
-                    right: 0%;
+                    right: -55px;
                     top: 0%;
                     color: white;
                     width: 22px;
@@ -236,11 +236,11 @@ footer {
             li {
                 margin: 0 10px;
 
-                &.modcourt {
+                .modcourt {
                     margin-right: 25px;
                 }
 
-                &.modlong {
+                .modlong {
                     margin-right: 40px;
                 }
             }

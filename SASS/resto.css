@@ -154,7 +154,7 @@ section .carte {
 }
 .carte .menu .plats .vert .fa-circle-check {
   position: absolute;
-  right: 0%;
+  right: -55px;
   top: 0%;
   color: white;
   width: 22px;
@@ -214,6 +214,9 @@ footer ul li {
 }
 footer ul li.modcourt {
   font-weight: 300;
+}
+footer ul li.modcourt a {
+  font-weight: bold;
 }
 footer ul li.modlong {
   font-weight: 500;
@@ -301,10 +304,10 @@ footer ul .partenaire {
   footer ul li {
     margin: 0 10px;
   }
-  footer ul li.modcourt {
+  footer ul li .modcourt {
     margin-right: 25px;
   }
-  footer ul li.modlong {
+  footer ul li .modlong {
     margin-right: 40px;
   }
   footer img {

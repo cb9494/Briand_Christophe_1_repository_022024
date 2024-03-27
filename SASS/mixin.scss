@@ -93,6 +93,8 @@
     }
 }
 
+@mixin vert {}
+
 @mixin footer {
     padding-bottom: 20px;
     width: auto;
@@ -118,11 +120,18 @@
 
             &.modcourt {
                 font-weight: 300;
+
+                a {
+                    font-weight: bold;
+                }
             }
+
 
             &.modlong {
                 font-weight: 500;
             }
+
+
         }
 
         a {
@@ -137,4 +146,6 @@
             padding-right: 10px;
         }
     }
+
+
 }
