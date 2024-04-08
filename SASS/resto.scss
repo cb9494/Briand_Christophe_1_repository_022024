@@ -113,12 +113,7 @@ section {
                 text-overflow: ellipsis;
             }
 
-            h5 {
-                padding-right: 15px;
-                font-size: 1.125rem;
-                font-weight: 600;
-                margin: 0;
-            }
+
 
             .prix {
                 display: flex;
@@ -128,6 +123,13 @@ section {
             }
 
             .vert {
+
+                h5 {
+                    padding-right: 15px;
+                    font-size: 1.125rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
 
                 border: 0;
                 padding: 0;
@@ -152,12 +154,42 @@ section {
         }
     }
 
+
+
     .button_resto {
         display: flex;
         justify-content: center;
         padding: 37px 0 40px;
         @include btn(186px);
     }
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.entrees {
+    opacity: 0;
+    animation: apparition 1s 1 forwards;
+    animation-delay: 1s;
+}
+
+.tot {
+    opacity: 0;
+    animation: apparition 1s 1 forwards;
+    animation-delay: 2s;
+}
+
+.dessert {
+    opacity: 0;
+    animation: apparition 1s 1 forwards;
+    animation-delay: 3s;
 }
 
 footer {

@@ -53,10 +53,8 @@ section .photo {
   width: 100%;
   height: 275px;
   display: inline-block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center 75%;
-     object-position: center 75%;
+  object-fit: cover;
+  object-position: center 75%;
 }
 section .carte {
   position: relative;
@@ -136,12 +134,6 @@ section .carte {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.carte .menu .plats h5 {
-  padding-right: 15px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
-}
 .carte .menu .plats .prix {
   display: flex;
   justify-content: space-between;
@@ -151,6 +143,12 @@ section .carte {
 .carte .menu .plats .vert {
   border: 0;
   padding: 0;
+}
+.carte .menu .plats .vert h5 {
+  padding-right: 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
 }
 .carte .menu .plats .vert .fa-circle-check {
   position: absolute;
@@ -188,6 +186,32 @@ section .carte {
 .carte .button_resto .button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.entrees {
+  opacity: 0;
+  animation: apparition 1s 1 forwards;
+  animation-delay: 1s;
+}
+
+.tot {
+  opacity: 0;
+  animation: apparition 1s 1 forwards;
+  animation-delay: 2s;
+}
+
+.dessert {
+  opacity: 0;
+  animation: apparition 1s 1 forwards;
+  animation-delay: 3s;
 }
 
 footer {
@@ -243,8 +267,7 @@ footer ul .partenaire {
   }
   section .photo {
     height: 383px;
-    -o-object-position: center 58%;
-       object-position: center 58%;
+    object-position: center 58%;
   }
   section .carte {
     width: 75%;
@@ -313,4 +336,6 @@ footer ul .partenaire {
   footer img {
     margin-bottom: 0px;
   }
-}/*# sourceMappingURL=resto.css.map */
+}
+
+/*# sourceMappingURL=resto.css.map */

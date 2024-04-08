@@ -21,13 +21,51 @@ main {
   width: 100%;
 }
 
-/*.loader {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-}*/
+.loader {
+  background-color: rgb(253, 253, 253);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  animation: disappear 0.5s 1 forwards;
+  animation-delay: 3s;
+}
+.loader .kitchen {
+  font-size: 3em;
+  color: rgb(147, 86, 220);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-duration: 3000ms;
+  animation: spin 3s linear;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes disappear {
+  to {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    transform: rgb(147, 86, 220) rgb(153, 226, 208);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  66% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   height: auto;
   width: 100%;
@@ -213,12 +251,10 @@ nav .choix p {
   background-color: white;
 }
 .resto .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 170px;
-  -o-object-position: center 61%;
-     object-position: center 61%;
+  object-position: center 61%;
   border-radius: 15px 15px 0 0;
 }
 .resto .card .card-txt {
@@ -258,7 +294,7 @@ nav .choix p {
 .resto .card .card-heart .coeur-plein {
   opacity: 0;
   transition-property: all;
-  transition-duration: 1000ms;
+  transition-duration: 200ms;
   background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   background-clip: text;
   -webkit-background-clip: text;
@@ -286,9 +322,9 @@ footer {
   padding-bottom: 20px;
   width: auto;
   height: auto;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column;*/
   background-color: rgb(53, 53, 53);
   color: white;
 }
@@ -307,6 +343,9 @@ footer ul li {
 footer ul li.modcourt {
   font-weight: 300;
 }
+footer ul li.modcourt a {
+  font-weight: bold;
+}
 footer ul li.modlong {
   font-weight: 500;
 }
@@ -320,6 +359,51 @@ footer ul .partenaire {
   padding-right: 10px;
 }
 
+/*footer {
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color_footer;
+    color: white;
+
+    img {
+        height: 1.25rem;
+        margin: 20px 22px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0 22px;
+        padding: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            &.modcourt {
+                font-weight: 300;
+            }
+
+            &.modlong {
+                font-weight: 500;
+            }
+        }
+
+        a {
+            color: white;
+        }
+
+        .couvert {
+            padding-right: 16px;
+        }
+
+        .partenaire {
+            padding-right: 10px;
+        }
+    }
+}*/
 @media screen and (min-width: 769px) {
   main {
     max-width: 1440px;
@@ -386,4 +470,6 @@ footer ul .partenaire {
   footer img {
     margin-bottom: 5px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
