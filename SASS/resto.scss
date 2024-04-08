@@ -113,23 +113,35 @@ section {
                 text-overflow: ellipsis;
             }
 
-
+            h5 {
+                padding-right: 5px;
+                font-size: 1.125rem;
+                font-weight: 600;
+                margin: 0;
+                position: absolute;
+                right: 5px;
+            }
 
             .prix {
+
+                //position: relative;
+                //display: block;
+                //right: 55px;
+                //top: 0px;
+
                 display: flex;
                 justify-content: space-between;
+                //align-items: center;
                 padding-bottom: 5px;
                 padding-right: 58px;
+
             }
+
+
 
             .vert {
 
-                h5 {
-                    padding-right: 15px;
-                    font-size: 1.125rem;
-                    font-weight: 600;
-                    margin: 0;
-                }
+
 
                 border: 0;
                 padding: 0;

@@ -134,6 +134,14 @@ section .carte {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.carte .menu .plats h5 {
+  padding-right: 5px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  right: 5px;
+}
 .carte .menu .plats .prix {
   display: flex;
   justify-content: space-between;
@@ -143,12 +151,6 @@ section .carte {
 .carte .menu .plats .vert {
   border: 0;
   padding: 0;
-}
-.carte .menu .plats .vert h5 {
-  padding-right: 15px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
 }
 .carte .menu .plats .vert .fa-circle-check {
   position: absolute;
