@@ -102,7 +102,7 @@ section .carte {
   padding: 0 13px;
 }
 .carte .menu h2 {
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   padding-bottom: 5px;
   border-bottom: 3px solid rgb(153, 226, 208);
@@ -115,46 +115,56 @@ section .carte {
   border-radius: 15px;
   margin-bottom: 10px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 .carte .menu .plats h3 {
   font-size: 1.125rem;
-  font-weight: 600;
-  padding: 15px 55px 0 15px;
+  font-weight: 500;
+  padding: 5px 55px 0 15px;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.carte .menu .plats h4 {
-  font-size: 1 rem;
+.carte .menu .plats .description {
+  font-size: 0.94 rem;
   font-weight: 300;
   margin: 0;
-  padding-left: 15px;
-  white-space: nowrap;
+  padding: 5px 55px 0 15px;
+}
+.carte .menu .plats .prix {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  padding-right: 58px;
+  transition: 0.2s;
+}
+.carte .menu .plats .ellipsis {
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
-.carte .menu .plats h5 {
-  padding-right: 5px;
+.carte .menu .plats .vert {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: -55px;
+  transition: 0.2s;
+}
+.carte .menu .plats .vert .euro {
+  padding-right: 10px;
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
-  position: absolute;
-  right: 5px;
-}
-.carte .menu .plats .prix {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 5px;
-  padding-right: 58px;
-}
-.carte .menu .plats .vert {
-  border: 0;
-  padding: 0;
+  position: relative;
+  bottom: 10px;
 }
 .carte .menu .plats .vert .fa-circle-check {
-  position: absolute;
-  right: -55px;
+  position: relative;
   top: 0%;
   color: white;
   width: 22px;
@@ -162,10 +172,18 @@ section .carte {
   background-color: rgb(153, 226, 208);
   border-radius: 0 15px 15px 0;
   width: 55px;
-  height: 64px;
+  height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.carte .menu .plats:hover .vert {
+  right: 0px;
+  transition: 0.2s;
+}
+.carte .menu .plats:hover .prix {
+  width: calc(100% - 55px);
+  transition: 0.2s;
 }
 .carte .button_resto {
   display: flex;
@@ -275,10 +293,6 @@ footer ul .partenaire {
     width: 75%;
     border-radius: 50px 50px 0 0;
     margin-top: -48px;
-    /*display: flex;
-    //justify-content: center;
-    flex-direction: column;
-    align-items: center;*/
   }
   section .carte .nom h1 {
     padding-top: 50px;
