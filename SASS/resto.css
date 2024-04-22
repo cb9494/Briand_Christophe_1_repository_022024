@@ -238,9 +238,6 @@ footer {
   padding-bottom: 20px;
   width: auto;
   height: auto;
-  /*display: flex;
-  justify-content: center;
-  flex-direction: column;*/
   background-color: rgb(53, 53, 53);
   color: white;
 }
@@ -276,6 +273,49 @@ footer ul .partenaire {
 }
 
 @media screen and (min-width: 769px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    background-color: rgb(53, 53, 53);
+    color: white;
+  }
+  footer img {
+    height: 1.25rem;
+    margin: 20px 22px;
+  }
+  footer ul {
+    list-style-type: none;
+    margin: 0 22px;
+    padding: 0;
+  }
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  footer ul li.modcourt {
+    font-weight: 300;
+  }
+  footer ul li.modcourt a {
+    font-weight: bold;
+  }
+  footer ul li.modlong {
+    font-weight: 500;
+  }
+  footer ul a {
+    color: white;
+  }
+  footer ul .couvert {
+    padding-right: 16px;
+  }
+  footer ul .partenaire {
+    padding-right: 10px;
+  }
+}
+@media screen and (min-width: 1025px) {
   main {
     max-width: 1440px;
     width: 100%;

@@ -54,7 +54,6 @@ main .loader .kitchen {
 @keyframes spin {
   0% {
     transform: rotate(0deg);
-    transform: rgb(147, 86, 220) rgb(153, 226, 208);
   }
   25% {
     transform: rotate(20deg);
@@ -322,9 +321,6 @@ footer {
   padding-bottom: 20px;
   width: auto;
   height: auto;
-  /*display: flex;
-  justify-content: center;
-  flex-direction: column;*/
   background-color: rgb(53, 53, 53);
   color: white;
 }
@@ -359,52 +355,86 @@ footer ul .partenaire {
   padding-right: 10px;
 }
 
-/*footer {
+@media screen and (min-width: 769px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
     padding-bottom: 20px;
     width: auto;
     height: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: $color_footer;
+    background-color: rgb(53, 53, 53);
     color: white;
-
-    img {
-        height: 1.25rem;
-        margin: 20px 22px;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0 22px;
-        padding: 0;
-
-        li {
-            margin-bottom: 10px;
-
-            &.modcourt {
-                font-weight: 300;
-            }
-
-            &.modlong {
-                font-weight: 500;
-            }
-        }
-
-        a {
-            color: white;
-        }
-
-        .couvert {
-            padding-right: 16px;
-        }
-
-        .partenaire {
-            padding-right: 10px;
-        }
-    }
-}*/
-@media screen and (min-width: 769px) {
+  }
+  footer img {
+    height: 1.25rem;
+    margin: 20px 22px;
+  }
+  footer ul {
+    list-style-type: none;
+    margin: 0 22px;
+    padding: 0;
+  }
+  footer ul li {
+    margin-bottom: 10px;
+  }
+  footer ul li.modcourt {
+    font-weight: 300;
+  }
+  footer ul li.modcourt a {
+    font-weight: bold;
+  }
+  footer ul li.modlong {
+    font-weight: 500;
+  }
+  footer ul a {
+    color: white;
+  }
+  footer ul .couvert {
+    padding-right: 16px;
+  }
+  footer ul .partenaire {
+    padding-right: 10px;
+  }
+  footer .intro h1 {
+    font-size: 2.5rem;
+  }
+  footer nav {
+    width: 67.5%;
+    margin: 40px 0;
+    padding: 0 16.25%;
+  }
+  footer nav .choix {
+    width: 290px;
+  }
+  footer .placement-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .resto {
+    width: 75%;
+    padding: 0 12.5%;
+  }
+  footer .resto .placement-resto {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  footer .resto .placement-resto .card {
+    width: 45%;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1025px) {
   main {
     max-width: 1440px;
     width: 100%;
@@ -461,14 +491,17 @@ footer ul .partenaire {
     flex-direction: row;
     margin: 0;
   }
-  footer ul li.modcourt {
+  footer ul li {
+    margin: 0 10px;
+  }
+  footer ul li .modcourt {
     margin-right: 25px;
   }
-  footer ul li.modlong {
+  footer ul li .modlong {
     margin-right: 40px;
   }
   footer img {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 }
 

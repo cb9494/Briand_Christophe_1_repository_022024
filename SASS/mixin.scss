@@ -80,7 +80,6 @@
         opacity: 0;
         transition-property: all;
         transition-duration: 200ms;
-        //transition: opacity 200ms;
         background-image: linear-gradient($color_secondaire, $color_primaire);
         background-clip: text;
         -webkit-background-clip: text;
@@ -97,9 +96,6 @@
     padding-bottom: 20px;
     width: auto;
     height: auto;
-    /*display: flex;
-    justify-content: center;
-    flex-direction: column;*/
     background-color: $color_footer;
     color: white;
 
@@ -146,4 +142,40 @@
     }
 
 
+}
+
+@mixin footerDesktop {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 30px 25px;
+
+    &.logo__footer {
+        padding-right: 56px;
+        padding-bottom: 2 px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+
+        li {
+            margin: 0 10px;
+
+            .modcourt {
+                margin-right: 25px;
+            }
+
+            .modlong {
+                margin-right: 40px;
+            }
+        }
+    }
+
+
+    img {
+        margin-bottom: 0px;
+    }
 }

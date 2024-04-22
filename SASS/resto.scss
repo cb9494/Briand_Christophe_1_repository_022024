@@ -210,9 +210,17 @@ footer {
     @include footer;
 }
 
-@media screen and (min-width:769px)
-/*and (max-width:1440px)*/
-    {
+@media screen and (min-width:769px) {
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px 0;
+        @include footer;
+    }
+}
+
+@media screen and (min-width:1025px) {
     main {
         max-width: 1440px;
         width: 100%;
@@ -249,39 +257,6 @@ footer {
     }
 
     footer {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        padding: 30px 25px;
-
-        &.logo__footer {
-            padding-right: 56px;
-            padding-bottom: 2 px;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-
-            li {
-                margin: 0 10px;
-
-                .modcourt {
-                    margin-right: 25px;
-                }
-
-                .modlong {
-                    margin-right: 40px;
-                }
-            }
-        }
-
-
-        img {
-            margin-bottom: 0px;
-        }
-
+        @include footerDesktop;
     }
 }
